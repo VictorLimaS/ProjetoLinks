@@ -1,0 +1,41 @@
+.box {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2rem;
+    height: 40%;
+    background-color: rgba(255, 255, 255, 0.89);
+    z-index: 1;
+}
+
+.box .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.box h2 {
+    margin: 3rem 0;
+}
+
+.box .colors {
+    display: flex;
+    gap: 2rem;
+}
+
+.box .colors .cor {
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box .colors .cor i {
+    font-size: 2rem;
+    cursor: pointer;
+}

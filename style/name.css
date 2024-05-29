@@ -6,9 +6,10 @@
         justify-content: center;
         width: 20%;
         height: 30%;
-        border-radius: 1rem;
         position: absolute;
-        background-color: rgba(152, 152, 152, 0.797);
+        background-color: rgba(255, 255, 255, 0.922);
+        border: 1px solid;
+        border-image: linear-gradient(to right, #f15bb5, #9b5de5, #fee440) 1;
         z-index: 1;
     }
 
@@ -17,7 +18,10 @@
         padding: 1rem .5rem;
         border-radius: 5rem;
         border: none;
+        outline: none;
         font-size: 1rem;
+        background-color: #ffffff57;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
     }
 
     .name button {
@@ -26,6 +30,7 @@
         border: none;
         font-size: 1rem;
         cursor: pointer;
+        background: rgba(177, 109, 174, 0.555);
     }
 
 

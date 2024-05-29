@@ -1,5 +1,5 @@
 
-    // Muda a foto
+// Muda a foto
 document.getElementById('file-input').addEventListener('change', function (event) {
   let file = event.target.files[0];
   let reader = new FileReader();
@@ -10,14 +10,14 @@ document.getElementById('file-input').addEventListener('change', function (event
 });
 
 
-    // Faz o Botao do label aparecer para editar o Nome e o Link 
+// Faz o Botao do label aparecer para editar o Nome e o Link 
 document.querySelector('.block .close').addEventListener('click', function () {
   let block = document.querySelector('.block');
   block.style.display = 'none';
 });
 
 
- // Adiciona os Nome e Links
+// Adiciona os Nome e Links
 document.querySelectorAll('.links span').forEach(function (span) {
   span.addEventListener('click', function () {
     let block = document.querySelector('.block');
@@ -27,7 +27,7 @@ document.querySelectorAll('.links span').forEach(function (span) {
 
     block.style.display = 'flex';
     nomeInput.value = label.textContent.trim();
-    linkInput.value = label.getAttribute('data-link') || ''; 
+    linkInput.value = label.getAttribute('data-link') || '';
 
     block.setAttribute('data-label-id', label.getAttribute('for'));
   });
@@ -43,6 +43,8 @@ document.addEventListener('keypress', function (event) {
   }
 });
 
+
+
 function enviarFormulario() {
   let nomeInput = document.getElementById('nome').value;
   let linkInput = document.getElementById('link').value;
@@ -52,7 +54,7 @@ function enviarFormulario() {
   label.querySelector('span').innerHTML = '<i class="fa-solid fa-ellipsis"></i>';
 
   label.textContent = nomeInput;
-  label.setAttribute('data-link', linkInput); 
+  label.setAttribute('data-link', linkInput);
 
   document.querySelector('.block').style.display = 'none';
 }
@@ -61,60 +63,112 @@ document.querySelectorAll('.links label').forEach(function (label) {
   label.addEventListener('click', function () {
     let link = this.getAttribute('data-link');
     if (link) {
-      window.open(link, '_blank'); 
+      window.open(link, '_blank');
     }
   });
 });
 
 
 
-  // mudar o nome do top 
-  document.addEventListener('DOMContentLoaded', function() {
-    const profileName = document.querySelector('.profile p');
-    const nameSection = document.querySelector('.name');
-  
-    profileName.addEventListener('click', function() {
-      nameSection.style.display = 'flex';
-    });
-  
-    const newnameInput = document.getElementById('newname');
-    newnameInput.addEventListener('keypress', function(event) {
-      if (event.key === 'Enter') {
-        enviarNome();
-      }
-    });
-  
-    document.getElementById('enviarName').addEventListener('click', enviarNome);
-  
-    function enviarNome() {
-      const newname = newnameInput.value.trim();
-  
-      if (newname !== '') {
-        profileName.textContent = newname;
-        nameSection.style.display = 'none';
-        newnameInput.value = '';
-      }
+// mudar o nome do top 
+document.addEventListener('DOMContentLoaded', function () {
+  const profileName = document.querySelector('.profile p');
+  const nameSection = document.querySelector('.name');
+
+  profileName.addEventListener('click', function () {
+    nameSection.style.display = 'flex';
+  });
+
+  const newnameInput = document.getElementById('newname');
+  newnameInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      enviarNome();
     }
   });
-  
+
+  document.getElementById('enviarName').addEventListener('click', enviarNome);
+
+  function enviarNome() {
+    const newname = newnameInput.value.trim();
+
+    if (newname !== '') {
+      profileName.textContent = newname;
+      nameSection.style.display = 'none';
+      newnameInput.value = '';
+    }
+  }
+});
 
 
-  // Links do icones
 
-document.addEventListener('DOMContentLoaded', function() {
+// Links do icones
+
+document.addEventListener('DOMContentLoaded', function () {
   const instagramIcon = document.querySelector('.fa-instagram');
   const facebookIcon = document.querySelector('.fa-facebook');
   const twitterIcon = document.querySelector('.fa-twitter');
 
-  instagramIcon.addEventListener('click', function() {
+  instagramIcon.addEventListener('click', function () {
     window.open('https://www.instagram.com/', '_blank');
   });
 
-  facebookIcon.addEventListener('click', function() {
+  facebookIcon.addEventListener('click', function () {
     window.open('https://www.facebook.com/', '_blank');
   });
 
-  twitterIcon.addEventListener('click', function() {
+  twitterIcon.addEventListener('click', function () {
     window.open('https://twitter.com/', '_blank');
   });
 });
+
+
+function toggleMenu() {
+  var menuIcon = document.querySelector('.hambuguer');
+  var box = document.querySelector('.box');
+
+  var isVisible = window.getComputedStyle(box).display !== 'none';
+
+  if (isVisible) {
+    box.style.right = '-100%';
+    setTimeout(function () {
+      box.style.display = 'none';
+    }, 1000);
+  } else {
+    box.style.display = 'flex';
+    box.style.right = '0';
+  }
+  menuIcon.classList.toggle('change');
+}
+
+function closeBox() {
+  var box = document.querySelector('.box');
+  box.style.right = '-100%';
+  setTimeout(function () {
+    box.style.display = 'none';
+  }, 1000);
+  var menuIcon = document.querySelector('.hambuguer');
+  menuIcon.classList.remove('change');
+}
+
+
+
+
+function changeColor(color) {
+  switch (color) {
+    case '#0d0d0d':
+      document.body.style.background = 'linear-gradient(to bottom right, #080808, #424548, #e0e1dd)';
+      break;
+    case '#b1afaf':
+      document.body.style.background = 'linear-gradient(to bottom right, #ffffff, #eae5e5, #7b7878)';
+      break;
+    case '#d534d0':
+      document.body.style.background = 'linear-gradient(to bottom right, #f15bb5, #9b5de5, #fee440)';
+      break;
+    case '#386dc2':
+      document.body.style.background = 'linear-gradient(to bottom right, #1e96fc, #072ac8, #a2d6f9)';
+      break;
+    default:
+      document.body.style.background = color;
+      break;
+  }
+}

@@ -7,10 +7,11 @@
     font-family: "Roboto", sans-serif;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
-    background: linear-gradient(to left, #3a86ff, #ff006e);
+    background: linear-gradient(to bottom right, #f15bb5, #9b5de5, #fee440);
     background-repeat: no-repeat;
 }
 
@@ -18,6 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 main {
@@ -48,7 +50,8 @@ main {
 
 .profile p {
     font-size: 1.7rem;
-   cursor: pointer;
+    cursor: pointer;
+    margin-top: 1rem;
     color: white;
 }
 
@@ -72,23 +75,23 @@ main {
 }
 
 .links label {
-    position: relative; 
+    position: relative;
     text-align: center;
     align-items: center;
     color: black;
     font-weight: bold;
     font-size: 1.5rem;
-    padding: 1rem;
+    padding: .7rem;
     border-radius: 5rem;
-    background-color: #f0f0f060; 
+    background-color: #ffffff57;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 1); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
 }
 
 
 .links label span {
     position: absolute;
-    right: 15px; 
+    right: 15px;
     font-size: 1.2rem;
 }
 
@@ -100,4 +103,15 @@ main {
 
 .footer img {
     width: 50px;
+}
+
+.hambuguer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.hambuguer i {
+    font-size: 2rem;
+    cursor: pointer;
 }

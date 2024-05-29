@@ -9,18 +9,44 @@
     <link rel="stylesheet" href="./style/projeto.css">
     <link rel="stylesheet" href="./style/conf.css">
     <link rel="stylesheet" href="./style/name.css">
+    <link rel="stylesheet" href="./style/box.css">
     <title>MyLinks</title>
 </head>
 
 <body>
     <main>
+        <div class="hambuguer"  onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="box">
+            <div class="close" onclick="closeBox()"><i class="fa-solid fa-xmark"></i></div>
+            <h2>Configuração de Cor</h2>
+            <div class="colors">
+                <div class="cor" onclick="changeColor('#0d0d0d')">
+                    <p>Dark</p>
+                    <i class="cor1 fa-solid fa-circle" style="color: #0d0d0d;"></i>
+                </div>
+                <div class="cor" onclick="changeColor('#b1afaf')">
+                    <p>Clear</p>
+                    <i class="cor2 fa-solid fa-circle" style="color: #b1afaf;"></i>
+                </div>
+                <div class="cor" onclick="changeColor('#d534d0')">
+                    <p>Pink</p>
+                    <i class="cor3 fa-solid fa-circle" style="color: #d534d0;"></i>
+                </div>
+                <div class="cor" onclick="changeColor('#386dc2')">
+                    <p>Blue</p>
+                    <i class="cor4 fa-solid fa-circle" style="color: #386dc2;"></i>
+                </div>
+            </div>
+        </div>
         <div class="content">
             <div class="profile">
                 <label for="file-input">
                     <img id="profile-img" src="./logo.png" alt="Foto de Perfil">
                 </label>
                 <input type="file" id="file-input" style="display: none;">
-                <p>Clique aqui</p>
+                <p>Clique aqui ←</p>
             </div>
             <div class="name">
                 <input id="newname" type="text" placeholder="Nome">
@@ -34,17 +60,17 @@
             </div>
 
             <div class="links">
-                <label id="label1" for="link1">Link 1 <span><i class="fa-solid fa-ellipsis"></i></span></label>
-                <label id="label2" for="link2">Link 2 <span><i class="fa-solid fa-ellipsis"></i></span></label>
-                <label id="label3" for="link3">Link 3 <span><i class="fa-solid fa-ellipsis"></i></span></label>
-                <label id="label4" for="link4">Link 4 <span><i class="fa-solid fa-ellipsis"></i></span></label>
+                <label for="link1">Link 1 <span><i class="fa-solid fa-ellipsis"></i></span></label>
+                <label for="link2">Link 2 <span><i class="fa-solid fa-ellipsis"></i></span></label>
+                <label for="link3">Link 3 <span><i class="fa-solid fa-ellipsis"></i></span></label>
+                <label for="link4">Link 4 <span><i class="fa-solid fa-ellipsis"></i></span></label>
             </div>
 
             <div class="block">
                 <div class="close"><i class="fa-solid fa-xmark"></i></div>
                 <input id="nome" type="text" placeholder="Nome">
                 <input id="link" type="text" placeholder="Link">
-                <button id="enviarBtn">Enviar <i class="fa-solid fa-share"></i></button>
+                <button id="enviarBtn">Pronto <i class="fa-solid fa-share"></i></button>
             </div>
 
             <div class="footer">
