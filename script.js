@@ -161,7 +161,7 @@ function changeColor(color) {
       document.body.style.background = 'linear-gradient(to bottom right, #080808, #424548, #e0e1dd)';
       break;
     case '#b1afaf':
-      document.body.style.background = 'linear-gradient(to bottom right, #ffffff, #eae5e5, #7b7878)';
+      document.body.style.background = 'linear-gradient(to bottom right, #ffffff, #8e8e8e, #7b7878)';
       break;
     case '#d534d0':
       document.body.style.background = 'linear-gradient(to bottom right, #f15bb5, #9b5de5, #fee440)';
