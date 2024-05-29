@@ -123,16 +123,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function toggleMenu() {
-  var menuIcon = document.querySelector('.hambuguer');
-  var box = document.querySelector('.box');
+  let menuIcon = document.querySelector('.hambuguer');
+  let box = document.querySelector('.box');
 
-  var isVisible = window.getComputedStyle(box).display !== 'none';
+  let isVisible = window.getComputedStyle(box).display !== 'none';
 
   if (isVisible) {
     box.style.right = '-100%';
     setTimeout(function () {
       box.style.display = 'none';
-    }, 1000);
+    },);
   } else {
     box.style.display = 'flex';
     box.style.right = '0';
@@ -140,19 +140,21 @@ function toggleMenu() {
   menuIcon.classList.toggle('change');
 }
 
+
+
 function closeBox() {
-  var box = document.querySelector('.box');
+  let box = document.querySelector('.box');
   box.style.right = '-100%';
   setTimeout(function () {
     box.style.display = 'none';
-  }, 1000);
-  var menuIcon = document.querySelector('.hambuguer');
+  },);
+  let menuIcon = document.querySelector('.hambuguer');
   menuIcon.classList.remove('change');
 }
 
 
 
-
+//Colors
 function changeColor(color) {
   switch (color) {
     case '#0d0d0d':
