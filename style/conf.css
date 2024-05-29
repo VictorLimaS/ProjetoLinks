@@ -1,0 +1,54 @@
+.block {
+    display: none;
+    position: relative;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 40%;
+    border-radius: 1rem;
+    position: absolute;
+    background-color: rgba(152, 152, 152, 0.797);
+}
+
+.block input {
+    width: 70%;
+    padding: 1rem .5rem;
+    border-radius: 5rem;
+    border: none;
+    font-size: 1rem;
+}
+
+.block .close {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    margin: .5rem;
+    font-size: 2rem;
+}
+
+.block button {
+    padding: 1rem;
+    border-radius: 5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 900px) {
+    .block {
+        width: 40%;
+        height: 50%;
+    }
+}
+
+
+@media screen and (max-width: 620px) {
+    .block {
+        width: 70%;
+        height: 50%;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/projeto.css">
+    <link rel="stylesheet" href="./style/conf.css">
+    <link rel="stylesheet" href="./style/name.css">
+    <title>MyLinks</title>
+</head>
+
+<body>
+    <main>
+        <div class="content">
+            <div class="profile">
+                <label for="file-input">
+                    <img id="profile-img" src="./logo.png" alt="Foto de Perfil">
+                </label>
+                <input type="file" id="file-input" style="display: none;">
+                <p>Clique aqui</p>
+            </div>
+            <div class="name">
+                <input id="newname" type="text" placeholder="Nome">
+                <button id="enviarName">Enviar <i class="fa-solid fa-share"></i></button>
+            </div>
+
+            <div class="social">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+
+            <div class="links">
+                <label id="label1" for="link1">Link 1 <span><i class="fa-solid fa-ellipsis"></i></span></label>
+                <label id="label2" for="link2">Link 2 <span><i class="fa-solid fa-ellipsis"></i></span></label>
+                <label id="label3" for="link3">Link 3 <span><i class="fa-solid fa-ellipsis"></i></span></label>
+                <label id="label4" for="link4">Link 4 <span><i class="fa-solid fa-ellipsis"></i></span></label>
+            </div>
+
+            <div class="block">
+                <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                <input id="nome" type="text" placeholder="Nome">
+                <input id="link" type="text" placeholder="Link">
+                <button id="enviarBtn">Enviar <i class="fa-solid fa-share"></i></button>
+            </div>
+
+            <div class="footer">
+                <h1>MyLinks</h1>
+                <img src="icon.png" alt="Icon">
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
